@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Bookmark Add
+{% endblock title %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        {% comment %} 입력완료라는 타입을 알려주기 위해 input 추가 {% endcomment %}
+        <input type="submit" value="Add" class="btn btn-info btn-sm">
+
+    </form>
+{% endblock content %}
